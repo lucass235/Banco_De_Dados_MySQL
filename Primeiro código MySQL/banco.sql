@@ -68,10 +68,42 @@
     -- pessoa_id INT NOT NULL,
     -- FOREIGN KEY (pessoa_id) REFERENCES pessoas(id)
     -- );
+    
+    -- Consulta de tabelas com relação
+		-- JOIN
+        -- INNER JOIN
+        -- LEFT JOIN
+        -- RIGHT JOIN
+        
+		-- SELECT pessoas.nome, enderecos.*
+		-- FROM pessoas
+		-- JOIN enderecos ON pessoas.id = enderecos.pessoa_id;
+ 
+		-- SELECT pessoas.nome, enderecos.*
+		-- FROM pessoas
+		-- LEFT JOIN enderecos ON pessoas.id = enderecos.pessoa_id;
+ 
+		-- SELECT pessoas.nome, enderecos.*
+		-- FROM pessoas
+		-- RIGHT JOIN enderecos ON pessoas.id = enderecos.pessoa_id;
 
+-- Funções de INT
+	-- SELECT SUM(salario) FROM pessoas; -- soma de salarios
+	-- SELECT SUM(salario)AS Soma_dos_Salarios FROM pessoas; -- soma de salarios com nome
 
-
-
-
-
-
+	-- SELECT COUNT(*)AS qtd_Pessoas FROM pessoas; -- CONTADOR
+	-- SELECT COUNT(*)AS qtd_enderecos FROM enderecos; -- Contador
+    
+    -- SELECT profissao, COUNT(*) AS qtd_por_profissao FROM pessoas
+    -- GROUP BY profissao; -- agrupadar dados com as contagens
+    
+-- Funções de String    
+	-- SELECT CONCAT("O nome da pessoa é: ", nome, ", e ele é: ", profissao)
+    -- AS dados_Concatenados
+    -- FROM pessoas;
+    
+    -- SELECT 
+    -- YEAR(data_nascimento) AS ANO_DE_NASCIMENTO,
+    -- MONTH(data_nascimento) AS MES_DE_NASCIMENTO,
+    -- DAY(data_nascimento) As DIA_DE_NASCIMENTO
+    -- FROM pessoas;
